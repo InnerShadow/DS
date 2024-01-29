@@ -4,7 +4,7 @@
 [Data set](https://www.kaggle.com/datasets/fedesoriano/electric-power-consumption/data)
 
 ### Data Preprocessing:
- The obtained .csv file contains columns such as Datetime, Temperature, Humidity, WindSpeed, GeneralDiffuseFlows, DiffuseFlows, PowerConsumption_Zone1, PowerConsumption_Zone2, PowerConsumption_Zone3. The average value was calculated across all three zones. A small window with a 10-minute interval was transformed into a window with a 1-hour interval, and the average values for each hour were calculated. Additionally, Datetime was split into columns 'Hour', 'Day', 'Month' as numerical features for training a regression model. The data were divided into test and train samples for model training and performance evaluation.
+ The obtained .csv file contains columns such as Datetime, Temperature, Humidity, WindSpeed, GeneralDiffuseFlows, DiffuseFlows, PowerConsumption_Zone1, PowerConsumption_Zone2, PowerConsumption_Zone3. The average value was calculated across all three zones. A small window with a 10-minute interval was transformed into a window with a 1-hour interval, and the average values for each hour were calculated. Additionally, Datetime was split into columns 'Hour', 'Day', 'Month' as numerical features for training a regression model. The data were normolized & divided into test and train samples for model training and performance evaluation.
 
 ### Data Visualization 
 Histograms depicting the distribution of each feature were generated.
