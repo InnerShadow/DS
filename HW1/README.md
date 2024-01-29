@@ -14,8 +14,8 @@ Histograms depicting the distribution of each feature were generated.
 
 | Model | MSE | R2-score |
 |-------------|-------------|-------------|
-| SVR    | $1.53*10^{7}$    | 0.52    |
-| LinearRegression    | $1.55*10^{7}$    | 0.63    |
+| SVR    | $1.54*10^{7}$    | 0.52    |
+| LinearRegression    | $1.19*10^{7}$    | 0.63    |
 | LassoRegression    | $1.19*10^{7}$    | 0.63    |
 | RandomForestRegressor | $4.30*10^{6}$ | 0.86 |
 | GradientBoostingRegressor | $1.39*10^{6}$ | 0.96 |
