@@ -7,10 +7,10 @@
  The obtained .csv file contains columns such as Datetime, Temperature, Humidity, WindSpeed, GeneralDiffuseFlows, DiffuseFlows, PowerConsumption_Zone1, PowerConsumption_Zone2, PowerConsumption_Zone3. The average value was calculated across all three zones. A small window with a 10-minute interval was transformed into a window with a 1-hour interval, and the average values for each hour were calculated. Additionally, Datetime was split into columns 'Hour', 'Day', 'Month' as numerical features for training a regression model. The data were normolized & divided into test and train samples for model training and performance evaluation.
 
 ### Data Visualization 
-Histograms depicting the distribution of each feature were generated.
+ Histograms depicting the distribution of each feature were generated.
 
 ### Regression Model Training
- Several regression models were trained, including SVR, LinearRegression, LassoRegression, RandomForestRegressor, GradientBoostingRegressor, AdaBoostRegressor, and DecisionTreeRegressor. Metrics such as MSE and r2-score were computed for each model. The best-performing models were GradientBoostingRegressor (r2-score = 0.95) and DecisionTreeRegressor (r2-score = 0.91). The complete table of metrics:
+ Several regression models were trained, including SVR, LinearRegression, LassoRegression, RandomForestRegressor, GradientBoostingRegressor, AdaBoostRegressor, and DecisionTreeRegressor. Metrics such as MSE and r2-score were computed for each model. The best-performing models were GradientBoostingRegressor (r2-score = 0.96) and DecisionTreeRegressor (r2-score = 0.92). The complete table of metrics:
 
 | Model | MSE | R2-score |
 |-------------|-------------|-------------|
