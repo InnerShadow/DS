@@ -21,3 +21,13 @@ Histograms depicting the distribution of each feature were generated.
 | GradientBoostingRegressor | $1.39*10^{6}$ | 0.96 |
 | AdaBoostRegressor | $4.69*10^{6}$ | 0.85 |
 | DecisionTreeRegressor | $2.58*10^{6}$ | 0.92 |
+
+Feature importances for best model (GradientBoostingRegressor) are:
+1. Temperature importances = 0.176;
+2. Humidity importances = 0.003;
+3. WindSpeed importances = 0.013;
+4. GeneralDiffuseFlows importances = 0.021;
+5. DiffuseFlows importances = 0.005;
+6. Hour importances = 0.697;
+7. Day importances = 0.009;
+8. Month importances = 0.076.
