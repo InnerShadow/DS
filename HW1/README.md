@@ -10,7 +10,7 @@
 Histograms depicting the distribution of each feature were generated.
 
 ### Regression Model Training
- Several regression models were trained, including SVR, LinearRegression, LassoRegression, RandomForestRegressor, GradientBoostingRegressor, AdaBoostRegressor, and DecisionTreeRegressor. Metrics such as MSE and r2-score were computed for each model. The best-performing models were GradientBoostingRegressor (r2-score = 0.95) and DecisionTreeRegressor (r2-score = 0.91). The complete table of metrics is as follows:
+ Several regression models were trained, including SVR, LinearRegression, LassoRegression, RandomForestRegressor, GradientBoostingRegressor, AdaBoostRegressor, and DecisionTreeRegressor. Metrics such as MSE and r2-score were computed for each model. The best-performing models were GradientBoostingRegressor (r2-score = 0.95) and DecisionTreeRegressor (r2-score = 0.91). The complete table of metrics:
 
 | Model | MSE | R2-score |
 |-------------|-------------|-------------|
