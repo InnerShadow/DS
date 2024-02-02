@@ -1,5 +1,5 @@
 # **HW2**
-## **1. Hierarchical clustering and DBSCAN using the example of a dataset on the distribution of penguins by type.**
+## **1. Perform hierarchical clustering and DBSCAN using the example of a dataset on the distribution of penguins by type.**
 
 ### [**Data set**](https://www.kaggle.com/datasets/youssefaboelwafa/clustering-penguins-species)
 
