@@ -22,7 +22,7 @@
 
 Based on the metrics, hierarchical clustering seems to have performed better. The measurement table is presented below.
 
-| Model | Silhouette Score | R2-Homogeneity | Completeness | V-measure | Calinski-Harabasz Index |
+| Model | Silhouette Score | Homogeneity | Completeness | V-measure | Calinski-Harabasz Index |
 |-----|--------|-------------|-|-|--|
 | DBSCAN    | 0.49    | 0.24    | 0.99 | 0.38 | 278.77 |
 | AgglomerativeClustering    | 0.51    | 0.23    | 0.99 | 0.38 | 363.97 |
