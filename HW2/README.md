@@ -19,7 +19,7 @@
 To reduce the dimensionality of the feature space, three methods were employed:
 1. PCA: Applying the DBSCAN algorithm revealed 4 clusters in the data transformed by PCA. Metrics were also collected. Despite other transformation approaches, PCA did not outperform in this context.
 2. UMAP: UMAP was employed to reduce the feature space initially to 2 dimensions and then to 3 dimensions. UMAP indicated the presence of 6 penguin species, unlike using PCA, while detected only 4 clusters. Metrics further demonstrated that clustering for 6 groups was more accurate than for 4.
-3. LDA: While LDA is typically used for supervised learning and may not be ideal for clustering tasks, exploring UMAP allowed obtaining class labels. For instance, using K-means on UMAP results provides labels that can be considered as target values. A 3-dimensional UMAP vector was inputted, and an attempt was made to reduce the feature space to 2 dimensions.
+3. LDA: While LDA is typically used for supervised learning and may not be ideal for clustering tasks. But exploring UMAP allowed to obtain class labels. For instance, using K-means on UMAP results provides labels that can be considered as target values. A 3-dimensional UMAP vector was inputted, and an attempt was made to reduce the feature space to 2 dimensions.
 
 ### Metrics
  1. Silhouette Score: Evaluates how similar objects within clusters are and how different objects in different clusters are. Scores range from -1 to 1, with higher values indicating denser and more distinct clusters.
