@@ -31,9 +31,9 @@ The measurement table is presented below.
 
 | Model | Reduce method |Silhouette Score | Homogeneity | Completeness | V-measure | Calinski-Harabasz Index |
 |-------|---------------|-----------------|-------------|--------------|-----------|-------------------------|
-| DBSCAN    | PCA | 0.49    | 0.24    | 0.99 | 0.38 | 278.77 |
-| AgglomerativeClustering   | PCA | 0.51    | 0.24    | 0.99 | 0.38 | 363.97 |
-| KMeans | PCA | 0.51 | 0.24 | 0.99 | 0.38 | 363.97 |
+| DBSCAN | PCA          | 0.49            | 0.24        | 0.99         | 0.38      | 278.77                  |
+| AgglomerativeClustering   | PCA | 0.51  | 0.24        | 0.99         | 0.38      | 363.97                  |
+| KMeans | PCA          | 0.51 | 0.24 | 0.99 | 0.38 | 363.97 |
 | DBSCAN    | UMAP 2D | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
 | AgglomerativeClustering   | UMAP 2D | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
 | KMeans | UMAP 2D | 0.53 | 0.30 | 0.99 | 0.46 | 435.02 |
