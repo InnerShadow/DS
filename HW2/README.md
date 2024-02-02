@@ -1,9 +1,9 @@
 # **HW2**
 ## **1. Hierarchical clustering and DBSCAN using the example of a dataset on the distribution of penguins by type.**
 
-### [Data set](https://www.kaggle.com/datasets/youssefaboelwafa/clustering-penguins-species)
+### [**Data set**](https://www.kaggle.com/datasets/youssefaboelwafa/clustering-penguins-species)
 
-### [Code](Clustering.ipynb)
+### [**Code**](Clustering.ipynb)
 
 ### Data Preprocessing
  A dataset with penguin characteristics was selected, including culmen_length_mm, culmen_depth_mm, flipper_length_mm, body_mass_g, and sex. The data contained some missing values, 2 for each feature except for sex, where 9 values were missing. Missing data were removed from the dataset. The categorical feature sex was then encoded with values (0, 1), where 0 represents female and 1 represents male. Descriptive statistics revealed that the flipper_length_mm column contained incorrect values, such as -132 mm or 5000 mm; these records were also removed. The data were normalized, and Principal Component Analysis (PCA) was applied to reduce feature space.

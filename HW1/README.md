@@ -1,9 +1,9 @@
 # **HW1**
 ## **Utilize a dataset on electricity consumption and train a regression model to forecast future consumption.**
 
-### [Data set](https://www.kaggle.com/datasets/fedesoriano/electric-power-consumption/data)
+### [**Data set**](https://www.kaggle.com/datasets/fedesoriano/electric-power-consumption/data)
 
-### [Code](HW1.ipynb)
+### [**Code**](HW1.ipynb)
 
 ### Data Preprocessing
  The obtained .csv file contains columns such as Datetime, Temperature, Humidity, WindSpeed, GeneralDiffuseFlows, DiffuseFlows, PowerConsumption_Zone1, PowerConsumption_Zone2, PowerConsumption_Zone3. The average value was calculated across all three zones. A small window with a 10-minute interval was transformed into a window with a 1-hour interval, and the average values for each hour were calculated. Additionally, Datetime was split into columns 'Hour', 'Day', 'Month' as numerical features for training a regression model. The data were normolized & divided into test and train samples for model training and performance evaluation.
