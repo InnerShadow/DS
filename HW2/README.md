@@ -32,13 +32,13 @@ The measurement table is presented below.
 | Model | Reduce method | Num clusters |Silhouette Score | Homogeneity | Completeness | V-measure | Calinski-Harabasz Index |
 |-------|---------------|-|----------------|-------------|--------------|-----------|-------------------------|
 | DBSCAN | PCA          | 4 |0.49            | 0.24        | 0.99         | 0.38      | 278.77                  |
-| AgglomerativeClustering   | 4 | PCA | 0.51  | 0.24        | 0.99         | 0.38      | 363.97                  |
+| AgglomerativeClustering   | PCA |  4 |  0.51  | 0.24        | 0.99         | 0.38      | 363.97                  |
 | KMeans | PCA         | 4 | 0.51 | 0.24 | 0.99 | 0.38 | 363.97 |
 | DBSCAN    | UMAP 2D | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
 | AgglomerativeClustering   | UMAP 2D | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
 | KMeans | UMAP 2D | 6 | 0.53 | 0.30 | 0.99 | 0.46 | 435.02 |
 | DBSCAN    | UMAP 3D | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
-| AgglomerativeClustering   | 6 | UMAP 3D | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
+| AgglomerativeClustering   | UMAP 3D |  6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
 | KMeans | UMAP 3D | 6 | 0.53 | 0.30 | 0.99 | 0.46 | 435.02 |
 | DBSCAN    | LDA | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
 | AgglomerativeClustering   | LDA | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
