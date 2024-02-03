@@ -34,7 +34,7 @@ The measurement table is presented below.
 | DBSCAN | PCA          | 4 |0.49            | 0.24        | 0.99         | 0.38      | 278.77                  |
 | AgglomerativeClustering   | PCA |  4 |  0.51  | 0.24        | 0.99         | 0.38      | 363.97                  |
 | KMeans | PCA         | 4 | 0.51 | 0.24 | 0.99 | 0.38 | 363.97 |
-| DBSCAN    | UMAP 2D | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
+| DBSCAN    | UMAP 2D | 5 | 0.52    | 0.27    | 0.99 | 0.42 | 389.18 |
 | AgglomerativeClustering   | UMAP 2D | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
 | KMeans | UMAP 2D | 6 | 0.53 | 0.30 | 0.99 | 0.46 | 434.97 |
 | DBSCAN    | UMAP 3D | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
