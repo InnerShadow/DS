@@ -12,7 +12,7 @@
 ### [**Code**](Clustering.ipynb)
 
 ### Data Preprocessing
- A dataset with penguin characteristics was selected, including culmen_length_mm, culmen_depth_mm, flipper_length_mm, body_mass_g, and sex. The data contained some missing values, 2 for each feature except for sex, where 9 values were missing. Missing data were removed from the dataset. The categorical feature sex was then encoded with values (0, 1), where 0 represents female and 1 represents male. Descriptive statistics revealed that the flipper_length_mm column contained incorrect values, such as -132 mm or 5000 mm; these records were also removed. The data were normalized, and Principal Component Analysis (PCA), UMAP 2D & 3D, LDA was applied to reduce feature space.
+ A dataset with penguin characteristics was selected, including culmen_length_mm, culmen_depth_mm, flipper_length_mm, body_mass_g, and sex. The data contained some missing values, 2 for each feature except for sex, where 9 values were missing. Missing data were removed from the dataset. The categorical feature sex was then encoded with values (0, 1), where 0 represents female and 1 represents male. Descriptive statistics revealed that the flipper_length_mm column contained incorrect values, such as -132 mm or 5000 mm; these records were also removed. The data were normalized, and Principal Component Analysis (PCA), UMAP 2D & 3D, LDA were applied to reduce feature space.
 
 ### Data Visualization 
  Histograms depicting the distribution of each parameter and box plots were generated.
