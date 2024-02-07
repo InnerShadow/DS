@@ -67,7 +67,7 @@ A set of images, comprising both original and augmented versions, was organized 
 6. Cluster 5 contains 'x'-like molecules but with an elongated central part.
 7. Cluster 6 comprises simple molecular structures with a lack of bends.
 8. Cluster 7 includes formic acid molecules.
-9. Cluster 8 contains benzylamine molecules; typically, the benzene ring is severed, leading DBSCAN to form a separate cluster.
+9. Cluster 8 contains benzylamine molecules; here, the benzene ring is cut, leading DBSCAN to form a separate cluster.
 
 ### Models
  Eleven models were created. After training each model, learning process graphs and 10 images in the format (original image - reconstructed image) were generated. Early stopping was applied to each model to prevent overfitting. It is essential to note that all models have relatively low metrics, such as 0.0404, but it should be understood that the images contain a lot of white background, contributing to the low metric.
