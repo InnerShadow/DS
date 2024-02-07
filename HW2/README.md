@@ -30,7 +30,7 @@ To reduce the dimensionality of the feature space, three methods were employed:
 The measurement table is presented below.
 
 | Model | Reduce method | Num clusters |Silhouette Score | Homogeneity | Completeness | V-measure | Calinski-Harabasz Index |
-|-------|---------------|-|----------------|-------------|--------------|-----------|-------------------------|
+|:-------:|:---------------:|:-:|:----------------:|:-------------:|:--------------:|:-----------:|:-------------------------:|
 | DBSCAN | PCA          | 4 |0.49            | 0.24        | 0.99         | 0.38      | 278.77                  |
 | AgglomerativeClustering   | PCA |  4 |  0.51  | 0.24        | 0.99         | 0.38      | 363.97                  |
 | KMeans | PCA         | 4 | 0.51 | 0.24 | 0.99 | 0.38 | 363.97 |
@@ -42,3 +42,56 @@ The measurement table is presented below.
 | KMeans | UMAP 3D | 6 | 0.53 | 0.30 | 0.99 | 0.46 | 435.02 |
 | DBSCAN    | LDA | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
 | AgglomerativeClustering   | LDA | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
+
+
+## **2. Create an autoencoder for dimensionality reduction of molecular illustrations in chemical education.**
+
+### [**Code**](Autoencoder.ipynb)
+
+### Dataset
+ No suitable datasets with chemical molecule images were found in open sources, so a decision was made to generate a custom dataset. The RDKit library was installed for this purpose. Fifty different images of molecules, sized 128x128 pixels, were generated, including alkanes, acids, salts, hydroxides, amines, and others. Additionally, 1050 images were generated with data augmentation, including zooming and rotation. To expedite training and find the best model, initial training was performed on black and white photos. After finding suitable model parameters, training was conducted on colored images. The data was also split into test and training sets.
+
+### Image EDA 
+A set of images, comprising both original and augmented versions, was organized into clusters. Initially, the pixel matrix was flattened into a vector, followed by the application of the UMAP algorithm for dimensionality reduction. Subsequently, the DBSCAN clustering method was employed, as it automatically determines the number of clusters. In the end, 8 clusters emerged, and here is a descriptive breakdown:
+1. Cluster 0 encompasses molecules with simple structures and exhibits a wide variance in molecule types.
+2. Cluster 1 features 'x'-like structures.
+3. Cluster 2 consists of molecules with benzene rings.
+4. Cluster 3 includes molecules with numerous bends.
+5. Cluster 4 comprises molecules with a central spot and three lines in different directions.
+6. Cluster 5 contains 'x'-like molecules but with an elongated central part.
+7. Cluster 6 comprises simple molecular structures with a lack of bends.
+8. Cluster 7 houses formic acid molecules.
+9. Cluster 8 contains benzylamine molecules; typically, the benzene ring is severed, leading DBSCAN to form a separate cluster.
+
+### Models
+ Eleven models were created. After training each model, learning process graphs and 10 images in the format (original image - reconstructed image) were generated. Early stopping was applied to each model to prevent overfitting. It is essential to note that all models have relatively low metrics, such as 0.0404, but it should be understood that the images contain a lot of white background, contributing to the low metric.
+
+1. Model #1 - Simple fully connected autoencoder. Neuron count on each layer: input image - 512 - 256 - 128 - encoder(512) - 128 - 256 - 512 - decoded image. Best loss metric during training - 0.0404 achieved at the 30th epoch. The autoencoder performs poorly, with mostly discernible molecular silhouettes but not letters. Incorrectly decoded molecules are also present.
+2. Model #2 - Attempt to complicate the model. Also a fully connected autoencoder with increased neuron count on layers. Neuron count on each layer: input image - 2048 - 1024 - encoder(512) - 1024 - 128 * 128 - decoded image. Best loss metric achieved was 0.0297 at the 37th epoch. Images improved, with well-decoded letters visible in some areas, but overall quality still needs improvement.
+3. Model #3 - Attempt to simplify the model. A simplified fully connected neural network with fewer neurons. Best loss metric of 0.0303 was achieved at the 45th epoch. The simplified model performed better than model #1 but worse than model #2. Neuron count on each layer: input image - 256 - 128 - encoder(64) - 128 - 256 - 128 * 128 - decoded image. Image boundaries became more visible, but overall quality is still quite poor.
+4. Model #4 - Attempt to transition to convolutional neural networks. Best loss metric of 0.0034 was achieved at the 25th epoch, a tenfold improvement compared to fully connected neural networks. Autoencoder structure: input image - 16 kernels 3x3 - MaxPooling2D by 2 - 32 kernels 3x3 - MaxPooling2D by 2 - 64 kernels 3x3 - encoder(MaxPooling2D by 2) - 64 kernels 3x3 - UpSampling2D by 2 - 32 kernels 3x3 - UpSampling2D by 2 - 16 3x3 kernels - UpSampling2D by 2 - decoded image. Images became clear, with visible molecule boundaries and letters.
+5. Model #5 - Attempt to increase kernel size on the input layer to improve the metric. Best loss metric of 0.0027 was achieved at the 25th epoch. Autoencoder structure: input image - 16 kernels 5x5 - MaxPooling2D by 2 - 32 kernels 3x3 - MaxPooling2D by 2 - 64 kernels 3x3 - encoder(MaxPooling2D by 2) - 64 kernels 3x3 - UpSampling2D by 2 - 32 kernels 3x3 - UpSampling2D by 2 - 16 5x5 kernels - UpSampling2D by 2 - decoded image. The metric increased compared to 3x3 kernels on the first layer, addressing the large white space contributing to the overall low metric.
+6. Model #6 - Attempt to increase kernel size on both layers. Best loss metric of 0.0027 was achieved at the 25th epoch. Autoencoder structure: input image - 16 kernels 5x5 - MaxPooling2D by 2 - 32 kernels 5x5 - MaxPooling2D by 2 - 64 kernels 3x3 - encoder(MaxPooling2D by 2) - 64 kernels 3x3 - UpSampling2D by 2 - 32 kernels 5x5 - UpSampling2D by 2 - 16 5x5 kernels - UpSampling2D by 2 - decoded image. The metric remained the same as in model #5, indicating that further model complexity may not be beneficial.
+7. Model #7 - The best-trained model (model #5) was selected and trained for 50 epochs instead of 25. Loss metric of 0.0017 was achieved at the 50th epoch. The images became of decent quality.
+8. Model #8 - The same structure as model #7, attempting to transition to RGB images. The structure is the same as in model #7, with input and output images decomposed into three digital components. Loss metric of 0.0028 was achieved at the 37th epoch. The metric decreased due to the transition from black and white to color images.
+9. Model #9 - The same structure as model #8, with BatchNormalization added after each Conv2D layer to improve the model's generalization capabilities. Loss metric of 0.0021 was achieved at the 41st epoch. All kernels were displayed, showing how the encoder encodes all images. The original 128x128 image is compressed using 64 kernels with a size of 16x16 - meaning no compression.
+10. Model #10 - Attempt to decrease the number of kernels at the encoder output to 16. Autoencoder structure: input image - 64 kernels 5x5 - MaxPooling2D by 2 - 48 kernels 3x3 - MaxPooling2D by 2 - 16 kernels 3x3 - encoder(MaxPooling2D by 2) - 64 kernels 3x3 - UpSampling2D by 2 - 48 kernels 3x3 - UpSampling2D by 2 - 16 5x5 kernels - UpSampling2D by 2 - decoded image. Loss metric of 0.0030 was achieved at the 30th epoch. Loss increased by 0.0007, but now the encoder encodes the message into 16 kernels sized 16x16 pixels, compressing the image four times. Heatmaps were also created to overlay encoded and original images, revealing areas where the model makes errors.
+11. Model #11 - Attempt to further decrease the number of kernels at the encoder output to 8. Autoencoder structure: input image - 64 kernels 5x5 - MaxPooling2D by 2 - 48 kernels 3x3 - MaxPooling2D by 2 - 16 kernels 3x3 - 8 kernels 3x3 - encoder(MaxPooling2D by 2) - 64 kernels 3x3 - UpSampling2D by 2 - 48 kernels 3x3 - UpSampling2D by 2 - 16 5x5 kernels - UpSampling2D by 2 - decoded image. Loss metric of 0.0042 was achieved at the 23rd epoch. Heatmaps were also created to overlay encoded and original images, revealing areas where the model makes errors. Compression is now 8 times, but the image is poorly reconstructed. Model #10 remains the best.
+
+### Results
+
+| Model # | Epochs | Loss | Colarization | Compression | BatchNormalization |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 1 | 30 | 0.0404 | Grayscale | 32 | No |
+| 2 | 36 | 0.0287 | Grayscale | 32 | No |
+| 3 | 45 | 0.0303 | Grayscale | 256 | No |
+| 4 | 25 | 0.0034 | Grayscale | 1 | No |
+| 5 | 25 | 0.0027 | Grayscale | 1 | No |
+| 6 | 25 | 0.0027 | Grayscale | 1 | No |
+| 7 | 50 | 0.0017 | Grayscale | 1 | No |
+| 8 | 37 | 0.0028 | RGB | 1 | No |
+| 9 | 40 | 0.0023 | RGB | 1 | Yes |
+| 10 | 30 | 0.0030 | RGB | 4 | Yes |
+| 11 | 23 | 0.0042 | RGB | 8 | Yes |
+
+
