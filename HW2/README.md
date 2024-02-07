@@ -58,7 +58,7 @@ The measurement table is presented below.
  No suitable datasets with chemical molecule images were found in open sources, so a decision was made to generate a custom dataset. The RDKit library was installed for this purpose. Fifty different images of molecules, sized 128x128 pixels, were generated, including alkanes, acids, salts, hydroxides, amines, and others. Additionally, 1050 images were generated with data augmentation, including zooming and rotation. To expedite training and find the best model, initial training was performed on black and white photos. After finding suitable model parameters, training was conducted on colored images. The data was also split into test and training sets.
 
 ### Image EDA 
-A set of images, comprising both original and augmented versions, was organized into clusters. Initially, the pixel matrix was flattened into a vector, followed by the application of the UMAP algorithm for dimensionality reduction. Subsequently, the DBSCAN clustering method was employed, as it automatically determines the number of clusters. In the end, 8 clusters emerged, and here is a descriptive breakdown:
+A set of images, comprising both original and augmented versions, was organized into clusters. Initially, the pixel matrix was flattened into a vector, followed by the application of the UMAP algorithm for dimensionality reduction. Subsequently, the DBSCAN clustering method was employed, as it automatically determines the number of clusters. In the end, 9 clusters emerged, and here is a descriptive breakdown:
 1. Cluster 0 encompasses molecules with simple structures and exhibits a wide variance in molecule types.
 2. Cluster 1 features 'x'-like structures.
 3. Cluster 2 consists of molecules with benzene rings.
@@ -66,7 +66,7 @@ A set of images, comprising both original and augmented versions, was organized 
 5. Cluster 4 comprises molecules with a central spot and three lines in different directions.
 6. Cluster 5 contains 'x'-like molecules but with an elongated central part.
 7. Cluster 6 comprises simple molecular structures with a lack of bends.
-8. Cluster 7 houses formic acid molecules.
+8. Cluster 7 includes formic acid molecules.
 9. Cluster 8 contains benzylamine molecules; typically, the benzene ring is severed, leading DBSCAN to form a separate cluster.
 
 ### Models
