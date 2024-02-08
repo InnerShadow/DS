@@ -86,18 +86,18 @@ A set of images, comprising both original and augmented versions, was organized 
 
 ### Results
 
-| Model # | Epochs | Loss | Colarization | Compression | BatchNormalization |
-|:-:|:-:|:-:|:-:|:-:|:-:|
-| 1 | 30 | 0.0404 | Grayscale | 32 | No |
-| 2 | 36 | 0.0287 | Grayscale | 32 | No |
-| 3 | 45 | 0.0303 | Grayscale | 256 | No |
-| 4 | 25 | 0.0034 | Grayscale | 1 | No |
-| 5 | 25 | 0.0027 | Grayscale | 1 | No |
-| 6 | 25 | 0.0027 | Grayscale | 1 | No |
-| 7 | 50 | 0.0017 | Grayscale | 1 | No |
-| 8 | 37 | 0.0028 | RGB | 1 | No |
-| 9 | 40 | 0.0023 | RGB | 1 | Yes |
-| 10 | 30 | 0.0030 | RGB | 4 | Yes |
-| 11 | 23 | 0.0042 | RGB | 8 | Yes |
+| Model # | Epochs | Loss | Architecture | Colarization | Compression | BatchNormalization |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 1 | 30 | 0.0404 | Fully connected | Grayscale | 32 | No |
+| 2 | 36 | 0.0287 | Fully connected | Grayscale | 32 | No |
+| 3 | 45 | 0.0303 | Fully connected | Grayscale | 256 | No |
+| 4 | 25 | 0.0034 | CNN | Grayscale | 1 | No |
+| 5 | 25 | 0.0027 | CNN | Grayscale | 1 | No |
+| 6 | 25 | 0.0027 | CNN | Grayscale | 1 | No |
+| 7 | 50 | 0.0017 | CNN | Grayscale | 1 | No |
+| 8 | 37 | 0.0028 | CNN | RGB | 1 | No |
+| 9 | 40 | 0.0023 | CNN | RGB | 1 | Yes |
+| 10 | 30 | 0.0030 | CNN | RGB | 4 | Yes |
+| 11 | 23 | 0.0042 | CNN | RGB | 8 | Yes |
 
 
