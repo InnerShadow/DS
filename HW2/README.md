@@ -50,6 +50,7 @@ The measurement table is presented below.
 | DBSCAN    | LDA | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
 | AgglomerativeClustering   | LDA | 6 | 0.53    | 0.30    | 0.99 | 0.46 | 435.02 |
 
+##
 
 ## **2. Create an autoencoder for dimensionality reduction of molecular illustrations in chemical education.**
 
@@ -101,8 +102,9 @@ A set of images, comprising both original and augmented versions, was organized 
 | 10 | 30 | 0.0030 | CNN | RGB | 4 | Yes |
 | 11 | 23 | 0.0042 | CNN | RGB | 8 | Yes |
 
+##
 
-## Show probabilites of logistic regression model
+## 3. Show probabilites of logistic regression model
 
 [**Code**](/HW2/Probabilites.ipynb)
 
