@@ -1,7 +1,8 @@
 # **HW2**
 
 ### [**1. Clustering task**](#1-perform-hierarchical-clustering-and-dbscan-using-the-example-of-a-dataset-on-the-distribution-of-penguins-by-type-use-umap--lda-to-reduce-feature-space)
-### [**2. Autoencoder**](#2-create-an-autoencoder-for-dimensionality-reduction-of-molecular-illustrations-in-chemical-education)
+### [**2. Autoencoder rask**](#2-create-an-autoencoder-for-dimensionality-reduction-of-molecular-illustrations-in-chemical-education)
+### [**3. Probabilites task**](#show-probabilites-of-logistic-regression-model)
 
 ##
 
@@ -101,3 +102,8 @@ A set of images, comprising both original and augmented versions, was organized 
 | 11 | 23 | 0.0042 | CNN | RGB | 8 | Yes |
 
 
+## Show probabilites of logistic regression model
+
+[**Code**](/HW2/Probabilites.ipynb)
+
+A binary classification task involving the creation of simulated data: 1000 patients with three symptoms. Symptoms are randomly generated and the presence of disease (0 or 1) is specified. The data is split into training and test samples using train_test_split. The logistic regression model was created and trained on the training data. After that, predictions are made on the test data, model quality metrics (accuracy, classification report), model coefficients, probabilities of a patient belonging to each class, and a ROC-AUC curve is plotted to assess classification quality.
