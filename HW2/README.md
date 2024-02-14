@@ -2,7 +2,7 @@
 
 ### [**1. Clustering task**](#1-perform-hierarchical-clustering-and-dbscan-using-the-example-of-a-dataset-on-the-distribution-of-penguins-by-type-use-umap--lda-to-reduce-feature-space)
 ### [**2. Autoencoder rask**](#2-create-an-autoencoder-for-dimensionality-reduction-of-molecular-illustrations-in-chemical-education)
-### [**3. Probabilites task**](#show-probabilites-of-logistic-regression-model)
+### [**3. Probabilites task**](#3-show-probabilites-of-logistic-regression-model)
 
 ##
 
