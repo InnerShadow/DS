@@ -66,8 +66,6 @@ ROC curves, confusion matrices, class prediction errors, learning curves, and fe
 
 ### [**Code**](/HW3/Clustering_AutoML.ipynb)
 
-### Clustering
-
 ### Dataset
 A default pycaret dataset - pokemon, containing features: #, Name, Type 1, Type 2, Total, HP, Attack, Defense, Sp. Atk, Sp. Def, Speed, Generation, Legendary.
 
