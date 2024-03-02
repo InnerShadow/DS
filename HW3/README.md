@@ -110,7 +110,7 @@ Prediction error, residuals, and feature importance plots were generated. A scre
 ### Resualts
 | # | Best model | R2-score |
 |:-:|:-:|:-:|
-| 1 | lightgbm | 0.9813 |
+| 1 | Light Gradient Boosting Machine | 0.9813 |
 
 ##
 
