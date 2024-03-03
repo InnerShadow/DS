@@ -3,7 +3,7 @@
 2. [HW2](HW2/) includs :
    1. [Clustering task](HW2/README.md/#1-perform-hierarchical-clustering-and-dbscan-using-the-example-of-a-dataset-on-the-distribution-of-penguins-by-type-use-umap--lda-to-reduce-feature-space) : perform hierarchical clustering and DBSCAN using the example of a dataset on the distribution of penguins by type. Use UMAP & LDA to reduce feature space.
    2. [Autoencoder](HW2/README.md#2-create-an-autoencoder-for-dimensionality-reduction-of-molecular-illustrations-in-chemical-education) : create an autoencoder for dimensionality reduction of molecular illustrations in chemical education.
-3. [HW3](/HW3/) includes :
+3. [HW3](/HW3/) use mlflow to investigate models properties and solve next tasks :
    1. [Binary classification task](/HW3/README.md/#1-solve-binary-classification-task-using-pycaret-automl) : solve binary classification task using pycaret AutoML. 
    2. [Multiclass classification task](/HW3/README.md/#2-solve-multiclass-classification-task-using-pycaret-automl) : solve multiclass classification task using pycaret AutoML.
    3. [Clustering task](/HW3/README.md/#3-solve-clustering-task-using-pycaret-automl) : solve clustering task using pycaret AutoML.
