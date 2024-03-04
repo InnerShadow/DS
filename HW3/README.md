@@ -32,7 +32,7 @@ ROC curves, confusion matrices, class prediction errors, learning curves, and fe
 |:-:|:-:|:-:|
 | 1 | Gradient Boosting Classifier | 0.3678 |
 | 2 | Gradient Boosting Classifier | 0.3693 |
-| 3 | Extra Trees Classifier | 0.9601 |
+| 3 | Random Forest Classifier| 0.8137 |
 
 ##
 
@@ -131,6 +131,7 @@ Rows that do not contain the target variable were dropped since attempting to pr
 3. The decision was made to abandon Bag of Words and TF-IDF in favor of LDA to extract topics from the texts. Started with 20 topics, achieving an F1 score of 0.3650 with the Random Forest Classifier.
 4. Increased the number of topics to 50, resulting in an F1 score of 0.4996 with the Random Forest Classifier.
 5. Normalized the class distribution by upsampling and downsampling each class to 44 values. Achieved the best F1 score of 0.8741 with the Random Forest Classifier.
+6. Try reduce number of topicks to 30 and number of increase each class samples to 52.
 
 ### Results Visualization
 ROC curves, confusion matrices, class prediction errors, learning curves, and feature importance plots were generated. A screenshot from the local run of mlflow for each experiment was provided.
@@ -142,5 +143,6 @@ ROC curves, confusion matrices, class prediction errors, learning curves, and fe
 | 2 | Random Forest Classifier | 0.0916 |
 | 3 | Random Forest Classifier | 0.3650 |
 | 4 | Random Forest Classifier | 0.4996 |
-| 5 | Random Forest Classifier | 0.8741 |
+| 5 | Random Forest Classifier | 0.6527 |
+| 6 | Random Forest Classifier | 0.7169	|
 
