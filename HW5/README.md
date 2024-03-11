@@ -42,6 +42,8 @@ I will train yolov5 small version, get 2 images for each batch, set 64 epochs an
 bash coco_train.sh
 ```
 
+Best mAP_0.5 is 0.866.
+
 I will test model on Sherlock video fragment. First of all we need grab this video from dropbox(script will do itself) and run *detect.py* modul with coefficients of model that we train in *coco_train.sh* script. To test model use:
 
 [Script](/HW5/coco_test.sh)
