@@ -6,7 +6,7 @@ wget -O video.mp4 https://www.dropbox.com/scl/fi/053yt3wl89nva8loxc1r9/video.mp4
 sleep 20
 
 cd yolov5
-python3 detect.py --weights yolov5s.pt --img 640 --conf 0.25 --source ../video.mp4
+python3 detect.py --weights runs/train/exp1/weights/best.pt --img 640 --conf 0.25 --source ../video.mp4
 
 echo "Complete!"
 
