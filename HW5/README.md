@@ -10,7 +10,7 @@
 
 In order to work correctly with yolov5, let's create a virtual environment in python, clone the repository from yolov5, and install the necessary dependencies. To do this use [script](/HW5/setup.sh):
 
-```{bash}
+```bash
 bash setup.sh
 ```
 
@@ -27,7 +27,7 @@ The first column is the class label, the second column is the normalized x-coord
 
 I will train yolov5 small version, get 2 images for each batch, set 64 epochs and confidence for object recognize in 0.25 and run *train.py* modul. To fit model use [script](/HW5/coco_train.sh): 
 
-```{bash}
+```bash
 bash coco_train.sh
 ```
 
@@ -35,7 +35,7 @@ Best mAP_0.5 is 0.866.
 
 I will test model on Sherlock video fragment. First of all we need grab this video from dropbox(script will do itself) and run *detect.py* modul with coefficients of model that we train in *coco_train.sh* script. To test model use [script](/HW5/coco_test.sh):
 
-```{bash}
+```bash
 bash coco_test.sh
 ```
 
