@@ -8,9 +8,7 @@
 
 ### Setup
 
-[Script](/HW5/setup.sh)
-
-In order to work correctly with yolov5, let's create a virtual environment in python, clone the repository from yolov5, and install the necessary dependencies. To do this, do the following:
+In order to work correctly with yolov5, let's create a virtual environment in python, clone the repository from yolov5, and install the necessary dependencies. To do this use [script](/HW5/setup.sh):
 
 ```{bash}
 bash setup.sh
