@@ -34,9 +34,7 @@ The first column is the class label, the second column is the normalized x-coord
 
 ### Model fitting
 
-[Script](/HW5/coco_train.sh)
-
-I will train yolov5 small version, get 2 images for each batch, set 64 epochs and confidence for object recognize in 0.25 and run *train.py* modul. To fit model use:
+I will train yolov5 small version, get 2 images for each batch, set 64 epochs and confidence for object recognize in 0.25 and run *train.py* modul. To fit model use [script](/HW5/coco_train.sh): 
 
 ```{bash}
 bash coco_train.sh
@@ -44,9 +42,7 @@ bash coco_train.sh
 
 Best mAP_0.5 is 0.866.
 
-I will test model on Sherlock video fragment. First of all we need grab this video from dropbox(script will do itself) and run *detect.py* modul with coefficients of model that we train in *coco_train.sh* script. To test model use:
-
-[Script](/HW5/coco_test.sh)
+I will test model on Sherlock video fragment. First of all we need grab this video from dropbox(script will do itself) and run *detect.py* modul with coefficients of model that we train in *coco_train.sh* script. To test model use [script](/HW5/coco_test.sh):
 
 ```{bash}
 bash coco_test.sh
@@ -56,25 +52,30 @@ bash coco_test.sh
 
 Model metrics on each epoch we can see [here](/HW5/Coco/coco_resualts.md).
 
-Test batch detections:  
+#### Show little low FPS gif fragment:
+![](/HW5/Coco/gif_res.gif) 
 
+#### Test batch detections:  
 ![](/HW5/Coco/coco_4.jpg)
 ![](/HW5/Coco/coco_10.jpg)
 
+#### Results
 ![](/HW5/Coco/coco_1.jpg)
 
-F1-confidence curve:  
+#### F1-confidence curve:  
 ![](/HW5/Coco/coco_6.jpg)
 
+#### Labels
 ![](/HW5/Coco/coco_8.jpg)
 
-Confusion matrix:
+####  Confusion matrix:
 ![](/HW5/Coco/coco_12.jpg)
 
-Precision-Recall Curve:
+#### Precision-Recall Curve:
 ![](/HW5/Coco/coco_13.jpg)
 
-Recall-confidance Curve
+#### Recall-confidance Curve
 ![](/HW5/Coco/coco_14.jpg)
 
+#### Labels correlogram
 ![](/HW5/Coco/coco_15.jpg)
