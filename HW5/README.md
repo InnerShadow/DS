@@ -20,14 +20,7 @@ bash setup.sh
 
 Investigae coco128 datast. We get:
 
-45 0.479492 0.688771 0.955609 0.5955  
-45 0.736516 0.247188 0.498875 0.476417  
-50 0.637063 0.732938 0.494125 0.510583  
-45 0.339438 0.418896 0.678875 0.7815   
-49 0.646836 0.132552 0.118047 0.0969375  
-49 0.773148 0.129802 0.0907344 0.0972292   
-49 0.668297 0.226906 0.131281 0.146896  
-49 0.642859 0.0792187 0.148063 0.148062  
+45 0.479492 0.688771 0.955609 0.5955   
 
 The first column is the class label, the second column is the normalized x-coordinate of the top left corner, the third column is the normalized y-coordinate of the top left corner, the fourth column is the normalized width, and the fifth column is the normalized height.
 
