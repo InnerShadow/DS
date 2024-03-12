@@ -53,7 +53,9 @@ bash coco_test.sh
 Model metrics on each epoch we can see [here](/HW5/Coco/coco_resualts.md).
 
 #### Show little low FPS gif fragment:
-![](/HW5/Coco/gif_res.gif) 
+![](/HW5/Coco/video_res_gif.gif) 
+
+#### The full video is available [here](https://www.dropbox.com/scl/fi/4gm51wsf362phe1jnypcd/video_res.mp4?rlkey=cyrcc38k5a0ij2nkmlrnkc5r4&dl=0)
 
 #### Test batch detections:  
 ![](/HW5/Coco/coco_4.jpg)
