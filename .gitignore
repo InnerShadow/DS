@@ -6,3 +6,7 @@ HW5/yolov5
 *.mp4
 HW5/dataset
 *.xz
+*datasets
+*images
+*tets
+*train_data
