@@ -4,12 +4,13 @@ train: images/train/
 val: images/val/
 
 names:
-  0: Aragorn
-  1: Boromir
-  2: Frodo Baggins
-  3: Gandalf
-  4: Gimli
-  5: Legolas
-  6: Merry Brandybuck
-  7: Peregrin Took
-  8: Sam Gamgee
+  0: Frodo Baggins
+  1: Sam Gamgee
+  2: Peregrin Took
+  3: Merry Brandybuck
+  4: Gandalf
+  5: Gimli
+  6: Legolas
+  7: Aragorn
+  8: Boromir
+
