@@ -11,3 +11,4 @@
    5. [NLP multiclass classification](/HW3/README.md/#5-solve-nlp-multiclass-classification-task-using-pycaret-automl) : solve NLP multiclass classification task using pycaret AutoML.
 4. [HW4](/HW4/) task : create a reinforcement learning neural network model and apply hyperparameter tuning to this model.
 5. [HW5](/HW5/) task : train yolov5 model on base & custom datasets. 
+6. [HW6](/HW6/Transformer.ipynb) task : Create a neural network model to predict the next frame in an animated cartoon. Let's compare a transformer model with a non-transformer model.
