@@ -10,3 +10,4 @@
    4. [Regression task](/HW3/README.md/#4-solve-regression-task-using-pycaret-automl) : solve regression task using pycaret AutoML.
    5. [NLP multiclass classification](/HW3/README.md/#5-solve-nlp-multiclass-classification-task-using-pycaret-automl) : solve NLP multiclass classification task using pycaret AutoML.
 4. [HW4](/HW4/) task : create a reinforcement learning neural network model and apply hyperparameter tuning to this model.
+5. [HW5](/HW5/) task : train yolov5 model on base & custom datasets. 

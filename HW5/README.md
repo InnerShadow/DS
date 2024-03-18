@@ -96,7 +96,6 @@ To assess the model's performance, a clip from the actual movie, accessible via 
 bash The_lord_of_the_rings_test.sh
 ```
 
-
 #### Show low FPS gif fragment:
 
 ![](/HW5/The_lord_of_the_rings/res.gif)
