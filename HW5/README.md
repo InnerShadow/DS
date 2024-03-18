@@ -90,7 +90,7 @@ bash The_lord_of_the_rings_train.sh
 
 ### Model testing
 
-To assess the model's performance, a clip from the actual movie, accessible via [link](https://www.dropbox.com/scl/fi/39bwqpuhittcji1c8rrmx/test_video.mp4?rlkey=h15mvua3eagjamth7shgizbtj&dl=0), and a small segment of this video in GIF format were chosen. Full process video is avalible [here](/HW1/HW1.ipynb). Bash [scrit](/HW5/The_lord_of_the_rings_test.sh) to do this:
+To assess the model's performance, a clip from the actual movie, accessible via [link](https://www.dropbox.com/scl/fi/39bwqpuhittcji1c8rrmx/test_video.mp4?rlkey=h15mvua3eagjamth7shgizbtj&dl=0), and a small segment of this video in GIF format were chosen. Full process video is avalible [here](https://www.dropbox.com/scl/fi/l9c712b0g96cwxdxusmcz/test_video__.mp4?rlkey=tudjvpruwcg8eti2n5vyhciq3&dl=0). Bash [scrit](/HW5/The_lord_of_the_rings_test.sh) to do this:
 
 ```bash
 bash The_lord_of_the_rings_test.sh
