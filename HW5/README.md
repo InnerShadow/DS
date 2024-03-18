@@ -1,10 +1,11 @@
 # HW5
 
-## [**1. Train on base dataset**](/HW5/README.md#we-need-to-train-the-yolov5-model-on-the-standard-dataset-coco128-as-well-as-to-check-the-performance-of-the-trained-model)
+## [**1. Train on base dataset**](/HW5/README.md#part-1--we-need-to-train-the-yolov5-model-on-the-standard-dataset-coco128-as-well-as-to-check-the-performance-of-the-trained-model)
+## [**2. Trin on custom dataset**](/HW5/README.md#part-2-creating-a-custom-dataset-annotation-and-yolov5-model-training)
 
 ## 
 
-## We need to train the yolov5 model on the standard dataset coco128 as well as to check the performance of the trained model.
+## Part 1 : we need to train the yolov5 model on the standard dataset coco128 as well as to check the performance of the trained model.
 
 ### Setup
 
@@ -41,8 +42,6 @@ bash coco_test.sh
 
 ### Results
 
-Model metrics on each epoch we can see [here](/HW5/Coco/coco_resualts.md).
-
 #### Show low FPS gif fragment:
 ![](/HW5/Coco/video_res_gif.gif) 
 
@@ -72,3 +71,55 @@ Model metrics on each epoch we can see [here](/HW5/Coco/coco_resualts.md).
 
 #### Labels correlogram
 ![](/HW5/Coco/coco_15.jpg)
+
+## 
+
+## Part 2: Creating a Custom Dataset, Annotation, and YOLOv5 Model Training
+
+### Data Preparation
+
+The task chosen for training data was facial recognition. The movie "The Lord of the Rings: The Fellowship of the Ring" was selected as the training dataset, with actors' faces playing the characters: *Frodo Baggins, Sam Gamgee, Peregrin Took, Merry Brandybuck, Gandalf, Gimli, Legolas, Aragorn, Boromir*. Initially, 252 images were collected featuring the selected characters. Subsequently, using a [script](/HW5/resize_images.py), the data was divided into 90% for training and 10% for testing, and image resolutions were reduced by a factor of 3 for each coordinate. Additionally, a [yaml](/HW5/The_lord_of_the_rings.yaml) file was created containing descriptions of classes and paths to training and testing data. Following this, the data was annotated in YOLO format.
+
+### Model training
+
+To train the model, a [script](/HW5/The_lord_of_the_rings_train.sh) was utilized. This script downloads preprocessed images with annotations, moves the [yaml](/HW5/The_lord_of_the_rings.yaml) file to the required directory, and initiates the training process. Perform 128 epochs with 2 batch_size.
+
+```bash
+bash The_lord_of_the_rings_train.sh
+```
+
+### Model testing
+
+To assess the model's performance, a clip from the actual movie, accessible via [link](https://www.dropbox.com/scl/fi/39bwqpuhittcji1c8rrmx/test_video.mp4?rlkey=h15mvua3eagjamth7shgizbtj&dl=0), and a small segment of this video in GIF format were chosen. Full process video is avalible [here](/HW1/HW1.ipynb). Bash [scrit](/HW5/The_lord_of_the_rings_test.sh) to do this:
+
+```bash
+bash The_lord_of_the_rings_test.sh
+```
+
+
+#### Show low FPS gif fragment:
+
+![](/HW5/The_lord_of_the_rings/res.gif)
+
+#### Test batch detections:  
+![](/HW5/The_lord_of_the_rings/3.jpg)
+![](/HW5/The_lord_of_the_rings/4.jpg)
+
+#### Labels correlogram
+![](/HW5/The_lord_of_the_rings/2.jpg)
+
+#### Labels
+![](/HW5/The_lord_of_the_rings/1.jpg)
+
+####  Confusion matrix:
+![](/HW5/The_lord_of_the_rings/8.jpg)
+
+#### Tensorboard results:
+![](/HW5/The_lord_of_the_rings/5.jpg)
+![](/HW5/The_lord_of_the_rings/6.jpg)
+
+#### Tensorboard model performanse:
+![](/HW5/The_lord_of_the_rings/7.jpg)
+
+### Conclusions
+The model correctly identifies most of the selected characters, however, due to not all characters appearing in the frame being present in the training dataset, it misidentifies either Lord Celeborn, Legolas, or Boromir instead. Additionally, it confuses between Peregrin Took and Merry Brandybuck, assigning them with a 50% probability, just like I do...
